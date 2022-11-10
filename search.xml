@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/04/08/hello-world/</url>
+    <title>失败总是贯穿人生始终</title>
+    <url>/2021/01/08/hello-world/</url>
     <content><![CDATA[<p>欢迎来到我的博客，这里存放了所有我积累的关于Microsoft 365 服务的所有case</p>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>总结</category>
       </categories>
       <tags>
-        <tag>demo</tag>
+        <tag>前言</tag>
       </tags>
   </entry>
 </search>
