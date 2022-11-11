@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>使用Gitalk进行Github的Oauth认证无法跨域获取Token问题解决办法  </title>
-    <url>/2022/11/10/shi-yong-gitalk-jin-xing-github-de-oauth-ren-zheng-wu-fa-kua-yu-huo-qu-token-wen-ti-jie-jue-ban-fa/</url>
-    <content><![CDATA[<p>描述: 在最开始之初我们也是使用官方演示代码中，使用的第三方提供的CORS代理服务，他会默认放行所有CORS请求，但是随着而来的问题是登陆会出现网络错误 Error: Network Error 或者在使用时出现 Forbidden 错误 (<a href="https://github.com/gitalk/gitalk/issues/514">https://github.com/gitalk/gitalk/issues/514</a>) 。</p>
-<p>目前由于该CORS代理服务遭到滥用，因此做了限制，导致GitTalk失效，在实践中发现如下CORS代理服务其要么有限制要么根本不能使用，所以实践的朋友们就不要像使用如下CORS代理服务：</p>
-<p>原文作者: WeiyiGeek [<a href="https://weiyigeek.top]">https://weiyigeek.top]</a><br>转载注明出处，原文地址：<a href="https://blog.weiyigeek.top/2022/8-17-682.html">https://blog.weiyigeek.top/2022/8-17-682.html</a><br>更多最新文章, 请关注我的微信公众账号【WeiyiGeek】或者【B站专栏】哟, 谢谢支持！(๑′ᴗ‵๑) ❤</p>
-<h1 id="限流"><a href="#限流" class="headerlink" title="限流"></a>限流</h1><p><a href="https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token">https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token</a></p>
-<h1 id="被墙"><a href="#被墙" class="headerlink" title="被墙"></a>被墙</h1><p><a href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</a></p>
-<p>温馨提示: CORS Anywhere 是一个 NodeJS 代理，它将 CORS 标头添加到代理请求中。 项目地址 (<a href="https://github.com/Rob--W/cors-anywhere">https://github.com/Rob--W/cors-anywhere</a>)</p>
-<p>在 百度 CSDN 中捡了一圈垃圾之后，还是没有最好的解决方案，然后通过某种方式Google了一下，找到两种替代的方式利用cloudflare worker (不幸得是默认的cf worker的域名workers.dev被墙了)或者 Vercel 搭建在线代理（无vps推荐使用Vercel） 或者 使用VPS中的nginx服务器来反代 <a href="https://github.com/">https://github.com</a> (比较推荐-当前博主正在使用)。</p>
-<p>方式1.没有VPS或者自己的服务器（想白嫖的）<br>描述: 在 cloudflare (<a href="https://dash.cloudflare.com/login/">https://dash.cloudflare.com/login/</a>) 上创建一个免费的在线代理来解决gitalk授权登录跨域问题，利用CloudFlare Worker创建在线代理，不需要我们有服务器，也不需要搭建Node.js服务，只需要注册一个CloudFlare账号，创建一个Worker，部署一个JS脚本就可以了，简单方便，下面我们就来看看如何创建吧。</p>
-]]></content>
-      <categories>
-        <category>bug</category>
-      </categories>
-  </entry>
-  <entry>
     <title>失败总是贯穿人生始终</title>
     <url>/2021/01/08/hello-world/</url>
     <content><![CDATA[<p>欢迎来到我的博客，这里存放了所有我积累的关于Microsoft 365 服务的所有case</p>
@@ -27,5 +11,21 @@
       <tags>
         <tag>py</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>使用Gitalk进行Github的Oauth认证无法跨域获取Token问题解决办法  </title>
+    <url>/2022/11/10/shi-yong-gitalk-jin-xing-github-de-oauth-ren-zheng-wu-fa-kua-yu-huo-qu-token-wen-ti-jie-jue-ban-fa/</url>
+    <content><![CDATA[<p>描述: 在最开始之初我们也是使用官方演示代码中，使用的第三方提供的CORS代理服务，他会默认放行所有CORS请求，但是随着而来的问题是登陆会出现网络错误 Error: Network Error 或者在使用时出现 Forbidden 错误 (<a href="https://github.com/gitalk/gitalk/issues/514">https://github.com/gitalk/gitalk/issues/514</a>) 。</p>
+<p>目前由于该CORS代理服务遭到滥用，因此做了限制，导致GitTalk失效，在实践中发现如下CORS代理服务其要么有限制要么根本不能使用，所以实践的朋友们就不要像使用如下CORS代理服务：</p>
+<p>&#x2F;&#x2F;instead</p>
+<h1 id="限流"><a href="#限流" class="headerlink" title="限流"></a>限流</h1><p><a href="https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token">https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token</a></p>
+<h1 id="被墙"><a href="#被墙" class="headerlink" title="被墙"></a>被墙</h1><p><a href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</a></p>
+<p>温馨提示: CORS Anywhere 是一个 NodeJS 代理，它将 CORS 标头添加到代理请求中。 项目地址 (<a href="https://github.com/Rob--W/cors-anywhere">https://github.com/Rob--W/cors-anywhere</a>)</p>
+<p>在 百度 CSDN 中捡了一圈垃圾之后，还是没有最好的解决方案，然后通过某种方式Google了一下，找到两种替代的方式利用cloudflare worker (不幸得是默认的cf worker的域名workers.dev被墙了)或者 Vercel 搭建在线代理（无vps推荐使用Vercel） 或者 使用VPS中的nginx服务器来反代 <a href="https://github.com/">https://github.com</a> (比较推荐-当前博主正在使用)。</p>
+<p>方式1.没有VPS或者自己的服务器（想白嫖的）<br>描述: 在 cloudflare (<a href="https://dash.cloudflare.com/login/">https://dash.cloudflare.com/login/</a>) 上创建一个免费的在线代理来解决gitalk授权登录跨域问题，利用CloudFlare Worker创建在线代理，不需要我们有服务器，也不需要搭建Node.js服务，只需要注册一个CloudFlare账号，创建一个Worker，部署一个JS脚本就可以了，简单方便，下面我们就来看看如何创建吧。</p>
+]]></content>
+      <categories>
+        <category>bug</category>
+      </categories>
   </entry>
 </search>

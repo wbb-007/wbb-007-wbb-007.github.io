@@ -1,11 +1,9 @@
-http://www.wbbtmh.top/2021/01/08/hello-world/
 http://www.wbbtmh.top/2022/11/10/shi-yong-gitalk-jin-xing-github-de-oauth-ren-zheng-wu-fa-kua-yu-huo-qu-token-wen-ti-jie-jue-ban-fa/
-http://www.wbbtmh.top/html/index.html
-http://www.wbbtmh.top/hexo/index.html
-http://www.wbbtmh.top/404.html
 http://www.wbbtmh.top/categories/index.html
 http://www.wbbtmh.top/tags/index.html
+http://www.wbbtmh.top/2021/01/08/hello-world/
+http://www.wbbtmh.top/404.html
 http://www.wbbtmh.top/
 http://www.wbbtmh.top/tags/py/
-http://www.wbbtmh.top/categories/bug/
 http://www.wbbtmh.top/categories/%E6%80%BB%E7%BB%93/
+http://www.wbbtmh.top/categories/bug/
