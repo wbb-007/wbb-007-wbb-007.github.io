@@ -1,31 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>失败总是贯穿人生始终</title>
-    <url>/2021/01/08/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到我的博客，这里存放了所有我积累的关于Microsoft 365 服务的所有case</p>
+    <title>Exchange Online邮件是否能加水印</title>
+    <url>/2021/01/08/Online%E9%82%AE%E4%BB%B6%E6%98%AF%E5%90%A6%E8%83%BD%E5%8A%A0%E6%B0%B4%E5%8D%B0/</url>
+    <content><![CDATA[<p>目前并没有自动添加水印的方式，一般是通过传输规则添加免责声明。</p>
+<p> 如果您希望添加水印，需要手动进行添加，方法如下：</p>
+<p>在新建电子邮件时，选择“选项”，点击页面颜色，选择其他填充，再选择图片</p>
+<p>然后选择储存好的水印图片，邮件中即可看到添加的水印</p>
 ]]></content>
       <categories>
-        <category>总结</category>
+        <category>mailbox</category>
       </categories>
       <tags>
-        <tag>py</tag>
+        <tag>mailbox client issue</tag>
       </tags>
   </entry>
   <entry>
-    <title>使用Gitalk进行Github的Oauth认证无法跨域获取Token问题解决办法  </title>
-    <url>/2022/11/10/shi-yong-gitalk-jin-xing-github-de-oauth-ren-zheng-wu-fa-kua-yu-huo-qu-token-wen-ti-jie-jue-ban-fa/</url>
-    <content><![CDATA[<p>描述: 在最开始之初我们也是使用官方演示代码中，使用的第三方提供的CORS代理服务，他会默认放行所有CORS请求，但是随着而来的问题是登陆会出现网络错误 Error: Network Error 或者在使用时出现 Forbidden 错误 (<a href="https://github.com/gitalk/gitalk/issues/514">https://github.com/gitalk/gitalk/issues/514</a>) 。</p>
-<p>目前由于该CORS代理服务遭到滥用，因此做了限制，导致GitTalk失效，在实践中发现如下CORS代理服务其要么有限制要么根本不能使用，所以实践的朋友们就不要像使用如下CORS代理服务：</p>
-<p>&#x2F;&#x2F;instead</p>
-<h1 id="限流"><a href="#限流" class="headerlink" title="限流"></a>限流</h1><p><a href="https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token">https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token</a></p>
-<h1 id="被墙"><a href="#被墙" class="headerlink" title="被墙"></a>被墙</h1><p><a href="https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token">https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token</a></p>
-<p>温馨提示: CORS Anywhere 是一个 NodeJS 代理，它将 CORS 标头添加到代理请求中。 项目地址 (<a href="https://github.com/Rob--W/cors-anywhere">https://github.com/Rob--W/cors-anywhere</a>)</p>
-<p>在 百度 CSDN 中捡了一圈垃圾之后，还是没有最好的解决方案，然后通过某种方式Google了一下，找到两种替代的方式利用cloudflare worker (不幸得是默认的cf worker的域名workers.dev被墙了)或者 Vercel 搭建在线代理（无vps推荐使用Vercel） 或者 使用VPS中的nginx服务器来反代 <a href="https://github.com/">https://github.com</a> (比较推荐-当前博主正在使用)。</p>
-<p>方式1.没有VPS或者自己的服务器（想白嫖的）<br>描述: 在 cloudflare (<a href="https://dash.cloudflare.com/login/">https://dash.cloudflare.com/login/</a>) 上创建一个免费的在线代理来解决gitalk授权登录跨域问题，利用CloudFlare Worker创建在线代理，不需要我们有服务器，也不需要搭建Node.js服务，只需要注册一个CloudFlare账号，创建一个Worker，部署一个JS脚本就可以了，简单方便，下面我们就来看看如何创建吧。</p>
+    <title>office 365 portal language setting</title>
+    <url>/2021/01/08/portalLanguage/</url>
+    <content><![CDATA[<p>用户在portal管理中心得语言设置选项消失，只能通过power shell去连接到Ms online模块去设置</p>
+<p>1.Ms Online模块安装</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> MSOnline</span><br></pre></td></tr></table></figure>
+<p>2.连接Ms Online服务</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Connect-MsolService</span> <span class="literal">-AzureEnvironment</span> AzureChinaCloud   </span><br></pre></td></tr></table></figure>
+<p>3.设置语言</p>
+<p>单个设置</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-MsolUser</span> <span class="literal">-UserPrincipalName</span> clearlove@wbbtmh.top <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span> </span><br></pre></td></tr></table></figure>
+<p>批量设置</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">import-csv</span> D:\language.csv | <span class="keyword">foreach</span> &#123;<span class="built_in">Set-Msoluser</span> <span class="literal">-UserPrincipalName</span> <span class="variable">$_</span>.UserPrincipalName <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>bug</category>
+        <category>office365 portal center</category>
       </categories>
+      <tags>
+        <tag>language setting</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>POP/IMAP协议配置邮箱需要启用SMTP发件，具体操作请参考以下步骤：</title>
+    <url>/2021/01/08/POPIMAP%E5%8D%8F%E8%AE%AE%E9%85%8D%E7%BD%AE%E9%82%AE%E7%AE%B1%E5%90%AF%E7%94%A8SMTP%E5%8F%91%E4%BB%B6/</url>
+    <content><![CDATA[<p>1.连接至Exchange Online：</p>
+<p>首次连接请先运行以下命令安装模块：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> <span class="literal">-Name</span> ExchangeOnlineManagement</span><br></pre></td></tr></table></figure>
+
+<p>非首次请跳过第一条命令，运行以下命令连接（Admin Account Email Address改为您的管理员账户）：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> <span class="literal">-ExecutionPolicy</span> RemoteSigned</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> ExchangeOnlineManagement</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Connect-ExchangeOnline</span> <span class="literal">-UserPrincipalName</span> AdminAccountEmailAddress <span class="literal">-AzureADAuthorizationEndpointUri</span> https://login.chinacloudapi.cn/common/oauth2/v2.<span class="number">0</span>/token <span class="literal">-ConnectionUri</span> https://partner.outlook.cn/PowerShell</span><br></pre></td></tr></table></figure>
+
+<p>2.运行以下命令查看SMTP属性：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-TransportConfig</span> | <span class="built_in">fl</span> *smtpclient* </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-CASMailbox</span> <span class="literal">-Identity</span> [<span class="type">white1</span>@<span class="type">whitebear.work</span>](mailto:white1@whitebear.work) | <span class="built_in">fl</span> *smtpclient*</span><br></pre></td></tr></table></figure>
+
+<p>3.启用SMTP客户端身份验证：</p>
+<p>如果要在组织级别启用SMTP客户端身份验证，请执行以下操作（运行成功后会在两小时之内生效）：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-TransportConfig</span> <span class="literal">-SmtpClientAuthenticationDisabled</span> <span class="variable">$false</span></span><br></pre></td></tr></table></figure>
+
+<p>如果要为特定邮箱启用SMTP身份验证，请参考以下操作(替换高亮部分为您指定的邮箱)：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-CASMailbox</span> <span class="literal">-Identity</span> [<span class="type">white1</span>@<span class="type">whitebear.work</span>](mailto:white1@whitebear.work) <span class="literal">-SmtpClientAuthenticationDisabled</span> <span class="variable">$false</span></span><br></pre></td></tr></table></figure>
+
+<p>参考官方文档连接：<a href="https://docs.microsoft.com/zh-cn/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission">https://docs.microsoft.com/zh-cn/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission </a></p>
+<p>国内版租户如果是新创建的，默认是禁用基本身份认证的，全禁用命令查询结果应该是255。</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-OrganizationConfig</span> | <span class="built_in">fl</span> BasicAuthBlockedApps</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/imgs/mailbox.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>mailbox</category>
+      </categories>
+      <tags>
+        <tag>mailbox protocol configuration</tag>
+      </tags>
   </entry>
 </search>
