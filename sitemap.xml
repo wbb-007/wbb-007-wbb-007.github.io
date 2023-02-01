@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wbbtmh.top/about/index.html</loc>
+    
+    <lastmod>2023-02-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.wbbtmh.top/2021/01/08/regedit/</loc>
     
     <lastmod>2023-01-04</lastmod>
@@ -23,15 +32,6 @@
     <loc>http://www.wbbtmh.top/2021/01/08/outlook%E7%9A%84clutter%E5%85%B3%E9%97%AD/</loc>
     
     <lastmod>2022-12-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.wbbtmh.top/about/index.html</loc>
-    
-    <lastmod>2022-12-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -103,7 +103,7 @@
 
   <url>
     <loc>http://www.wbbtmh.top/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-02-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -111,28 +111,28 @@
   
   <url>
     <loc>http://www.wbbtmh.top/tags/mailbox-client-issue/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-02-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.wbbtmh.top/tags/language-setting/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-02-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.wbbtmh.top/tags/mailbox-protocol-configuration/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-02-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.wbbtmh.top/tags/windows-knowledge/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-02-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -141,21 +141,21 @@
   
   <url>
     <loc>http://www.wbbtmh.top/categories/mailbox/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-02-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.wbbtmh.top/categories/office365-portal-center/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-02-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.wbbtmh.top/categories/windows-component/</loc>
-    <lastmod>2023-01-04</lastmod>
+    <lastmod>2023-02-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

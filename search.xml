@@ -97,22 +97,40 @@
       </tags>
   </entry>
   <entry>
-    <title>Exchange Online邮件是否能加水印</title>
+    <title>regedit</title>
     <url>/2021/01/08/regedit/</url>
-    <content><![CDATA[<table>
+    <content><![CDATA[<p>用过Windows系统的你肯定多少知道一点注册表的知识，就算不知道也没事，因为我一开始也不是特别了解<br>注册表的详细知识可以自行百度，我总结了一下注册表的作用如下。</p>
+<p>微软采用注册表来统一管理软硬件配置，从而大大提高了系统的稳定性和安全性，同时也使我们能更容易的对系统进行维护和管理。<br>注册表是windows操作系统，硬件设备以及客户应用程序得以运行和保存设置的核心“数据库”。<br>简单来说注册表是一个庞大的树状分层结构的数据库系统。<br>注册表记录了用户安装在计算机上的软件和每个程序的相互关联信息，包括计算机配置或自动配置的即插即用的设备和已用的各种设备说明，状态信息和数据等。</p>
+<table>
 <thead>
 <tr>
-<th>HKEY-CLASSES-ROOT</th>
-<th>表头</th>
+<th align="center">分支名称</th>
+<th align="center">释义</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>HKEY-CURRENT-USER</td>
-<td>单元格</td>
+<td align="center">HKEY-CLASSES-ROOT</td>
+<td align="center">文件扩展名与应用的关联及OLE信息</td>
 </tr>
 <tr>
-<td>HKEY-LOCAL-MACHINE</td>
-<td>单元格</td>
+<td align="center">HKEY-CURRENT-USER</td>
+<td align="center">当前登录用户控制面板选项和桌面等的设置,以及映射的网络驱动器</td>
+</tr>
+<tr>
+<td align="center">HKEY-LOCAL-MACHINE</td>
+<td align="center">计算机硬件与应用程序信息</td>
+</tr>
+<tr>
+<td align="center">HKEY-USERS</td>
+<td align="center">所有登录用户的信息</td>
+</tr>
+<tr>
+<td align="center">HKEY-CURRENT-CONFIG</td>
+<td align="center">计算机硬件配置信息</td>
+</tr>
+<tr>
+<td align="center">HKEY-DYN-DATA(*)</td>
+<td align="center">即插即用和系统性能的动态信息</td>
 </tr>
 </tbody></table>
 ]]></content>
