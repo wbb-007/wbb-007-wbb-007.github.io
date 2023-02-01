@@ -21,14 +21,14 @@
 
 
 
-<link rel="canonical" href="http://www.wbbtmh.top/2021/01/08/language/">
+<link rel="canonical" href="http://www.wbbtmh.top/categories/windows-component/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.wbbtmh.top/2021/01/08/language/","path":"2021/01/08/language/","title":"office 365 portal language setting"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/windows-component/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>office 365 portal language setting | Blog</title>
+<title>分类: windows component | Blog</title>
   
 
 
@@ -177,145 +177,50 @@
 
     </div>
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner category posts-collapse">
 
 
   
-
-
-<div class="post-block">
   
   
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wbbtmh.top/2021/01/08/language/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Bruce Wang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="office 365 portal language setting | Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          office 365 portal language setting
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <h1 class="collection-header">windows component
+          <small>分类</small>
         </h1>
+      </div>
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-01-08 13:32:00" itemprop="dateCreated datePublished" datetime="2021-01-08T13:32:00+08:00">2021-01-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-02 16:05:53" itemprop="dateModified" datetime="2022-12-02T16:05:53+08:00">2022-12-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/office365-portal-center/" itemprop="url" rel="index"><span itemprop="name">office365 portal center</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <p>用户在portal管理中心得语言设置选项消失，只能通过power shell去连接到Ms online模块去设置</p>
-<p>1.Ms Online模块安装</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> MSOnline</span><br></pre></td></tr></table></figure>
-<p>2.连接Ms Online服务</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Connect-MsolService</span> <span class="literal">-AzureEnvironment</span> AzureChinaCloud   </span><br></pre></td></tr></table></figure>
-<p>3.设置语言</p>
-<p>单个设置</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-MsolUser</span> <span class="literal">-UserPrincipalName</span> clearlove@wbbtmh.top <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span> </span><br></pre></td></tr></table></figure>
-<p>批量设置</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">import-csv</span> D:\language.csv | <span class="keyword">foreach</span> &#123;<span class="built_in">Set-Msoluser</span> <span class="literal">-UserPrincipalName</span> <span class="variable">$_</span>.UserPrincipalName <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
-
-
+      
+    <div class="collection-year">
+      <span class="collection-header">2021</span>
     </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-          <div class="reward-container">
-  <div>觉得这篇文章对您有帮助的话，可以打赏一下哟(￣y▽,￣)╭</div>
-  <button>
-    赞赏
-  </button>
-  <div class="post-reward">
-      <div>
-        <img src="/imgs/wechatpay.jpg" alt="Bruce Wang 微信">
-        <span>微信</span>
-      </div>
-      <div>
-        <img src="/imgs/alipay.jpg" alt="Bruce Wang 支付宝">
-        <span>支付宝</span>
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-01-08T13:32:00+08:00"
+              content="2021-01-08">
+          01-08
+        </time>
       </div>
 
-  </div>
-</div>
+      <div class="post-title">
+          <a class="post-title-link" href="/2021/01/08/regedit/" itemprop="url">
+            <span itemprop="name">Exchange Online邮件是否能加水印</span>
+          </a>
+      </div>
 
-          <div class="post-tags">
-              <a href="/tags/language-setting/" rel="tag"><i class="fa fa-tag"></i> language setting</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2021/01/08/POPIMAP%E5%8D%8F%E8%AE%AE%E9%85%8D%E7%BD%AE%E9%82%AE%E7%AE%B1%E5%90%AF%E7%94%A8SMTP%E5%8F%91%E4%BB%B6/" rel="prev" title="POP/IMAP协议配置邮箱需要启用SMTP发件，具体操作请参考以下步骤">
-                  <i class="fa fa-chevron-left"></i> POP/IMAP协议配置邮箱需要启用SMTP发件，具体操作请参考以下步骤
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2021/01/08/Online%E9%82%AE%E4%BB%B6%E6%98%AF%E5%90%A6%E8%83%BD%E5%8A%A0%E6%B0%B4%E5%8D%B0/" rel="next" title="Exchange Online邮件是否能加水印">
-                  Exchange Online邮件是否能加水印 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
+      
+    </header>
   </article>
-</div>
 
-
-
-
-
+    </div>
+  </div>
+  
+  
+  
 
 </div>
   </main>

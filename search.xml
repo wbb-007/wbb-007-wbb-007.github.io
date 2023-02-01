@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Exchange Online邮件是否能加水印</title>
+    <url>/2021/01/08/Online%E9%82%AE%E4%BB%B6%E6%98%AF%E5%90%A6%E8%83%BD%E5%8A%A0%E6%B0%B4%E5%8D%B0/</url>
+    <content><![CDATA[<p>目前并没有自动添加水印的方式，一般是通过传输规则添加免责声明。</p>
+<p> 如果您希望添加水印，需要手动进行添加，方法如下：</p>
+<p>在新建电子邮件时，选择“选项”，点击页面颜色，选择其他填充，再选择图片</p>
+<p>然后选择储存好的水印图片，邮件中即可看到添加的水印</p>
+]]></content>
+      <categories>
+        <category>mailbox</category>
+      </categories>
+      <tags>
+        <tag>mailbox client issue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>office 365 portal language setting</title>
+    <url>/2021/01/08/language/</url>
+    <content><![CDATA[<p>用户在portal管理中心得语言设置选项消失，只能通过power shell去连接到Ms online模块去设置</p>
+<p>1.Ms Online模块安装</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> MSOnline</span><br></pre></td></tr></table></figure>
+<p>2.连接Ms Online服务</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Connect-MsolService</span> <span class="literal">-AzureEnvironment</span> AzureChinaCloud   </span><br></pre></td></tr></table></figure>
+<p>3.设置语言</p>
+<p>单个设置</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-MsolUser</span> <span class="literal">-UserPrincipalName</span> clearlove@wbbtmh.top <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span> </span><br></pre></td></tr></table></figure>
+<p>批量设置</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">import-csv</span> D:\language.csv | <span class="keyword">foreach</span> &#123;<span class="built_in">Set-Msoluser</span> <span class="literal">-UserPrincipalName</span> <span class="variable">$_</span>.UserPrincipalName <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>office365 portal center</category>
+      </categories>
+      <tags>
+        <tag>language setting</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>POP/IMAP协议配置邮箱需要启用SMTP发件，具体操作请参考以下步骤</title>
     <url>/2021/01/08/POPIMAP%E5%8D%8F%E8%AE%AE%E9%85%8D%E7%BD%AE%E9%82%AE%E7%AE%B1%E5%90%AF%E7%94%A8SMTP%E5%8F%91%E4%BB%B6/</url>
     <content><![CDATA[<p>1.连接至Exchange Online：</p>
@@ -40,43 +77,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Exchange Online邮件是否能加水印</title>
-    <url>/2021/01/08/Online%E9%82%AE%E4%BB%B6%E6%98%AF%E5%90%A6%E8%83%BD%E5%8A%A0%E6%B0%B4%E5%8D%B0/</url>
-    <content><![CDATA[<p>目前并没有自动添加水印的方式，一般是通过传输规则添加免责声明。</p>
-<p> 如果您希望添加水印，需要手动进行添加，方法如下：</p>
-<p>在新建电子邮件时，选择“选项”，点击页面颜色，选择其他填充，再选择图片</p>
-<p>然后选择储存好的水印图片，邮件中即可看到添加的水印</p>
-]]></content>
-      <categories>
-        <category>mailbox</category>
-      </categories>
-      <tags>
-        <tag>mailbox client issue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>office 365 portal language setting</title>
-    <url>/2021/01/08/language/</url>
-    <content><![CDATA[<p>用户在portal管理中心得语言设置选项消失，只能通过power shell去连接到Ms online模块去设置</p>
-<p>1.Ms Online模块安装</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> MSOnline</span><br></pre></td></tr></table></figure>
-<p>2.连接Ms Online服务</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Connect-MsolService</span> <span class="literal">-AzureEnvironment</span> AzureChinaCloud   </span><br></pre></td></tr></table></figure>
-<p>3.设置语言</p>
-<p>单个设置</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-MsolUser</span> <span class="literal">-UserPrincipalName</span> clearlove@wbbtmh.top <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span> </span><br></pre></td></tr></table></figure>
-<p>批量设置</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">import-csv</span> D:\language.csv | <span class="keyword">foreach</span> &#123;<span class="built_in">Set-Msoluser</span> <span class="literal">-UserPrincipalName</span> <span class="variable">$_</span>.UserPrincipalName <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>office365 portal center</category>
-      </categories>
-      <tags>
-        <tag>language setting</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>outlook的clutter功能</title>
     <url>/2021/01/08/outlook%E7%9A%84clutter%E5%85%B3%E9%97%AD/</url>
     <content><![CDATA[<p>这是微软关于clutter的详细解释 <a href="https://learn.microsoft.com/zh-cn/exchange/recipients-in-exchange-online/manage-user-mailboxes/clutter-notifications-in-outlook">clutter文档</a>。<br>我就不多解释什么是clutter了，详细问题请email我<br>如何去关闭clutter下面是power shell命令</p>
@@ -95,5 +95,37 @@
       <tags>
         <tag>mailbox client issue</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Exchange Online邮件是否能加水印</title>
+    <url>/2021/01/08/regedit/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>HKEY-CLASSES-ROOT</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HKEY-CURRENT-USER</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>HKEY-LOCAL-MACHINE</td>
+<td>单元格</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>windows component</category>
+      </categories>
+      <tags>
+        <tag>windows knowledge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/12/27/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
