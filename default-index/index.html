@@ -343,101 +343,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.wbbtmh.top/2021/01/08/language/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Bruce Wang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/08/language/" class="post-title-link" itemprop="url">office 365 portal language setting</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-01-08 13:32:00" itemprop="dateCreated datePublished" datetime="2021-01-08T13:32:00+08:00">2021-01-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-02 16:05:53" itemprop="dateModified" datetime="2022-12-02T16:05:53+08:00">2022-12-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/office365-portal-center/" itemprop="url" rel="index"><span itemprop="name">office365 portal center</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>用户在portal管理中心得语言设置选项消失，只能通过power shell去连接到Ms online模块去设置</p>
-<p>1.Ms Online模块安装</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> MSOnline</span><br></pre></td></tr></table></figure>
-<p>2.连接Ms Online服务</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Connect-MsolService</span> <span class="literal">-AzureEnvironment</span> AzureChinaCloud   </span><br></pre></td></tr></table></figure>
-<p>3.设置语言</p>
-<p>单个设置</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-MsolUser</span> <span class="literal">-UserPrincipalName</span> clearlove@wbbtmh.top <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span> </span><br></pre></td></tr></table></figure>
-<p>批量设置</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">import-csv</span> D:\language.csv | <span class="keyword">foreach</span> &#123;<span class="built_in">Set-Msoluser</span> <span class="literal">-UserPrincipalName</span> <span class="variable">$_</span>.UserPrincipalName <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://www.wbbtmh.top/2021/01/08/POPIMAP%E5%8D%8F%E8%AE%AE%E9%85%8D%E7%BD%AE%E9%82%AE%E7%AE%B1%E5%90%AF%E7%94%A8SMTP%E5%8F%91%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -550,7 +455,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.wbbtmh.top/2021/01/08/outlook%E7%9A%84clutter%E5%85%B3%E9%97%AD/">
+    <link itemprop="mainEntityOfPage" href="http://www.wbbtmh.top/2021/01/08/language/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -568,7 +473,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/08/outlook%E7%9A%84clutter%E5%85%B3%E9%97%AD/" class="post-title-link" itemprop="url">outlook的clutter功能</a>
+          <a href="/2021/01/08/language/" class="post-title-link" itemprop="url">office 365 portal language setting</a>
         </h2>
 
         <div class="post-meta-container">
@@ -586,7 +491,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-26 17:49:44" itemprop="dateModified" datetime="2022-12-26T17:49:44+08:00">2022-12-26</time>
+      <time title="修改时间：2022-12-02 16:05:53" itemprop="dateModified" datetime="2022-12-02T16:05:53+08:00">2022-12-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -594,7 +499,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/mailbox/" itemprop="url" rel="index"><span itemprop="name">mailbox</span></a>
+          <a href="/categories/office365-portal-center/" itemprop="url" rel="index"><span itemprop="name">office365 portal center</span></a>
         </span>
     </span>
 
@@ -608,15 +513,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>这是微软关于clutter的详细解释 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/exchange/recipients-in-exchange-online/manage-user-mailboxes/clutter-notifications-in-outlook">clutter文档</a>。<br>我就不多解释什么是clutter了，详细问题请email我<br>如何去关闭clutter下面是power shell命令</p>
-<p>1.连接到exchange管理中心</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Connect-ExchangeOnline</span> <span class="literal">-UserPrincipalName</span> AdminAccountEmailAddress <span class="literal">-AzureADAuthorizationEndpointUri</span> https://login.chinacloudapi.cn/common/oauth2/v2.<span class="number">0</span>/token <span class="literal">-ConnectionUri</span> https://partner.outlook.cn/PowerShell</span><br></pre></td></tr></table></figure>
-<p>2.查看clutter是否开启</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">get-Clutter</span> <span class="literal">-Identity</span> <span class="string">&quot;accountEamilAddress&quot;</span>  单个用户</span><br><span class="line"><span class="built_in">Get-Mailbox</span> <span class="literal">-Filter</span> * <span class="literal">-ResultSize</span> Unlimited | <span class="built_in">Get-Clutter</span> 所有用户</span><br></pre></td></tr></table></figure>
-<p>3.开启和关闭用户的clutter功能（true为开启，false为关闭）</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-Clutter</span> <span class="literal">-Identity</span> <span class="string">&quot;accountEamilAddress&quot;</span> <span class="literal">-Enable</span> <span class="variable">$true</span> 单个用户</span><br><span class="line"><span class="built_in">Get-Mailbox</span> <span class="literal">-Filter</span> * <span class="literal">-ResultSize</span> Unlimited | <span class="built_in">Set-Clutter</span> <span class="literal">-Enable</span> <span class="variable">$true</span> 所有用户</span><br></pre></td></tr></table></figure>
-<p>这里吐槽一下微软的cmd语法，fliter去过滤出来的所有用户是不带用户名的，账号信息在MailboxIdentity里面<br>而且是把账号拆分成CN和OU这种模式，而且自己的第三方域名不会显示，不知道什么原因，我的wbbtmh.top域名的账号有些默认变成了mschina的域名<br>这可能是微软的bug，反正这个所有用户查看clutter的信息让人摸不到头脑，很烂。<br>另外再次吐槽网上没有关于所有人的clutter关闭的命令，这个是我查了一下官方文档关于filter集合发现也没有这个属性的应用。<br>然后想了一下可以用 ResultSize Unlimited去返回所有人信息 但是得使用竖线|这个东西去拼接条件不然用get单独获取系统会识别不了。<br>最后吐槽一下希望官方更新一下文档，虽然这个筛选功能官方已经默认关闭了，但是不知道为啥有的用户还是能开启，去查了他得cmd记录也没有发现开启的操作</p>
-<p>下面给一下官方对于怎么开启这个功能的解释 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/microsoft-365/admin/email/configure-clutter?view=o365-worldwide">clutter开启关闭</a>。</p>
+          <p>用户在portal管理中心得语言设置选项消失，只能通过power shell去连接到Ms online模块去设置</p>
+<p>1.Ms Online模块安装</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> MSOnline</span><br></pre></td></tr></table></figure>
+<p>2.连接Ms Online服务</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Connect-MsolService</span> <span class="literal">-AzureEnvironment</span> AzureChinaCloud   </span><br></pre></td></tr></table></figure>
+<p>3.设置语言</p>
+<p>单个设置</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-MsolUser</span> <span class="literal">-UserPrincipalName</span> clearlove@wbbtmh.top <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span> </span><br></pre></td></tr></table></figure>
+<p>批量设置</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">import-csv</span> D:\language.csv | <span class="keyword">foreach</span> &#123;<span class="built_in">Set-Msoluser</span> <span class="literal">-UserPrincipalName</span> <span class="variable">$_</span>.UserPrincipalName <span class="literal">-PreferredLanguage</span> <span class="string">&quot;en-US&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -735,6 +642,99 @@
 <td align="center">即插即用和系统性能的动态信息</td>
 </tr>
 </tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://www.wbbtmh.top/2021/01/08/outlook%E7%9A%84clutter%E5%85%B3%E9%97%AD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Bruce Wang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/08/outlook%E7%9A%84clutter%E5%85%B3%E9%97%AD/" class="post-title-link" itemprop="url">outlook的clutter功能</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-01-08 13:32:00" itemprop="dateCreated datePublished" datetime="2021-01-08T13:32:00+08:00">2021-01-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-12-26 17:49:44" itemprop="dateModified" datetime="2022-12-26T17:49:44+08:00">2022-12-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/mailbox/" itemprop="url" rel="index"><span itemprop="name">mailbox</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>这是微软关于clutter的详细解释 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/exchange/recipients-in-exchange-online/manage-user-mailboxes/clutter-notifications-in-outlook">clutter文档</a>。<br>我就不多解释什么是clutter了，详细问题请email我<br>如何去关闭clutter下面是power shell命令</p>
+<p>1.连接到exchange管理中心</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Connect-ExchangeOnline</span> <span class="literal">-UserPrincipalName</span> AdminAccountEmailAddress <span class="literal">-AzureADAuthorizationEndpointUri</span> https://login.chinacloudapi.cn/common/oauth2/v2.<span class="number">0</span>/token <span class="literal">-ConnectionUri</span> https://partner.outlook.cn/PowerShell</span><br></pre></td></tr></table></figure>
+<p>2.查看clutter是否开启</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">get-Clutter</span> <span class="literal">-Identity</span> <span class="string">&quot;accountEamilAddress&quot;</span>  单个用户</span><br><span class="line"><span class="built_in">Get-Mailbox</span> <span class="literal">-Filter</span> * <span class="literal">-ResultSize</span> Unlimited | <span class="built_in">Get-Clutter</span> 所有用户</span><br></pre></td></tr></table></figure>
+<p>3.开启和关闭用户的clutter功能（true为开启，false为关闭）</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-Clutter</span> <span class="literal">-Identity</span> <span class="string">&quot;accountEamilAddress&quot;</span> <span class="literal">-Enable</span> <span class="variable">$true</span> 单个用户</span><br><span class="line"><span class="built_in">Get-Mailbox</span> <span class="literal">-Filter</span> * <span class="literal">-ResultSize</span> Unlimited | <span class="built_in">Set-Clutter</span> <span class="literal">-Enable</span> <span class="variable">$true</span> 所有用户</span><br></pre></td></tr></table></figure>
+<p>这里吐槽一下微软的cmd语法，fliter去过滤出来的所有用户是不带用户名的，账号信息在MailboxIdentity里面<br>而且是把账号拆分成CN和OU这种模式，而且自己的第三方域名不会显示，不知道什么原因，我的wbbtmh.top域名的账号有些默认变成了mschina的域名<br>这可能是微软的bug，反正这个所有用户查看clutter的信息让人摸不到头脑，很烂。<br>另外再次吐槽网上没有关于所有人的clutter关闭的命令，这个是我查了一下官方文档关于filter集合发现也没有这个属性的应用。<br>然后想了一下可以用 ResultSize Unlimited去返回所有人信息 但是得使用竖线|这个东西去拼接条件不然用get单独获取系统会识别不了。<br>最后吐槽一下希望官方更新一下文档，虽然这个筛选功能官方已经默认关闭了，但是不知道为啥有的用户还是能开启，去查了他得cmd记录也没有发现开启的操作</p>
+<p>下面给一下官方对于怎么开启这个功能的解释 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/microsoft-365/admin/email/configure-clutter?view=o365-worldwide">clutter开启关闭</a>。</p>
 
       
     </div>
